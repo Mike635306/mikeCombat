@@ -1,0 +1,366 @@
+body{
+    margin: 0;
+}
+
+.game{
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/bg.jpg);
+    background-size: cover ;
+    background-position: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.game_window{
+
+    width: 25vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 35px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+
+.game_header{
+    width: 100%;
+    height: 15%;
+    color: white;
+    
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: Arial;
+}
+
+.game_main{
+    box-shadow: 0px -10px 70px red;
+    width: 100%;
+    height: 85%;
+    border-top: 3px solid gold;
+    border-radius: 15px 15px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.game_name{
+    text-align: center;
+}
+.header_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main_bar div{
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    align-content: center;
+
+    font-family: Arial;
+    width: 5vw;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #32363C;
+}
+
+.main_bar{
+    height:8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_wallet{
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.main_level{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+.level_bar{
+    width: 80%;
+    height: 10px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+.level_progress{
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(120deg,#ADFAA1,#C597CC,#2F39A3);
+    transition: all .2s ease;
+}
+
+.main_tap{
+    width:12vw;
+    border-radius: 50%;
+    height: 12vw;
+    border: 9px solid #35389E;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#6f02c9,#2B2D74);
+    box-shadow: inset 0px 0px 30px gold;
+    margin: 0 auto;
+}
+
+.main_tap img{
+    width: 100px;
+
+}
+
+.main_energy{
+    
+    width: 100%;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial;
+}
+
+
+.game_footer{
+    width: 80%;
+    height: 7%;
+    background-color:#32363C ;
+    border-radius: 15px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.game_footer p{
+    font-size: 8px;
+}
+.game_footer  div{
+    color: white;
+    font-family: Arial;
+    height: 80%;
+    width: 10%;
+    transition: all .3s ease;
+}
+.game_footer  div:hover{
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+
+.main_tap{
+    user-select: none;
+    position: relative;
+}
+
+
+.tap-money{
+    width: 30px !important;
+    position: absolute;
+    animation: tap-money 1s 1;
+}
+
+
+.game_auth{
+width: 100vw;
+height: 100vh;
+background-color: black;
+position: fixed;
+left: 0;
+top: 0;
+z-index: 1000;
+background-image: url(../img/Image20241124121434.png);
+background-position: center bottom;
+background-size: 500px;
+background-repeat: no-repeat;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.game_auth form{
+
+width: 300px;
+height: 300px;
+
+border-top: 2px solid red;
+border-radius: 15px;
+box-shadow: 0px -15px 10px gold;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: space-evenly;
+backdrop-filter: blur(5px);
+
+}
+
+#username{
+border: none;
+background: none;
+outline: none;
+box-sizing: inset 0px 0px 5px gold;
+width: 150px;
+height: 40px;
+border-radius: 15px;
+text-align: center;
+color:white;
+
+}
+#create_acc{
+width: 150px;
+height: 40px;
+background: none;
+border: none;
+outline: none;
+box-shadow:0px 0px 10px blue ;
+border-radius: 15px;
+color: wheat;
+transition: all .2s ease;
+}
+
+#create_acc:hover{
+background: blue;
+color: white;
+transform: translateY(-5px);
+}
+
+
+
+
+@keyframes tap-money{
+    0%{
+         transform: translateY(0);
+         opacity: 1;
+    }
+    100%{
+         transform: translateY(-30px);
+         opacity: 0;
+    }
+}
+
+@keyframes taping{
+    0%{
+        transform: skew(0);
+    }
+    50%{
+        transform: skew(3deg);
+    }
+    100%{
+        transform: skew(0);
+    }
+}
+
+@media screen and (max-width:431px){
+
+.main_wallet-cash{
+ font-size: 24px;
+
+}
+
+.game_footer{
+    height: 50px;
+}
+
+.main_tap img{
+    width: 80px;
+}
+
+.main_tap{
+    width: 150px;
+    height: 150px;
+}
+
+.game_window{
+    width: 95vw;
+    height: 100vh;
+}
+
+.main_bar div{
+width: 20vw;
+}
+
+}
+    
+
+@media screen and (max-width:822px){
+
+
+.main_wallet-cash{
+ font-size: 27px;
+       
+ }
+.game_footer{
+ height: 56px;
+ }  
+ .main_tap img{
+ width: 88px;
+}  
+.main_tap{
+width: 200px;
+height: 200px;
+}
+.game_window{
+ width: 50vw;
+ height: 90vh;
+} 
+.main_bar div{
+width: 25vw;
+}
+}
+
+@media screen and (max-width:1025px){
+
+
+    .main_wallet-cash{
+        font-size: 27px;    
+        }
+       .game_footer{
+        height: 56px;
+        }  
+        .main_tap img{
+        width: 88px;
+       }  
+       .main_tap{
+       width: 200px;
+       height: 200px;
+       }
+       .game_window{
+        width: 60vw;
+        height: 90vh;
+       } 
+       .main_bar div{
+       width: 25vw;
+       }
+}
+
